@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries | QometricsTech</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/particles.js" defer></script>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  <qometrics-header></qometrics-header>
+
+  <section style="padding-top: 150px; min-height: 100vh;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 6rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Industries We <span class="gradient-text">Transform</span></h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We don't just build generic software. We engineer industry-specific solutions designed to solve complex domain problems and unlock new revenue streams.</p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: var(--space-xl); gap: 4rem;">
+        
+        <!-- FinTech -->
+        <div class="glass-card reveal stagger-1" style="border-top: 4px solid #00c3ff;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
+          <h2 class="text-neon" style="margin-bottom: 1.5rem; color: #00c3ff;">FinTech & Banking</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">Modernizing legacy banking infrastructure with cloud-native microservices, building secure payment gateways, and deploying algorithmic trading platforms.</p>
+          <div style="background: rgba(0, 195, 255, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+            <p style="font-size: 0.9rem; font-style: italic; color: #00c3ff;">"QometricsTech rebuilt our core trading engine in Go, reducing latency by 40ms and handling 10x our previous volume." - CTO, GlobalTrade</p>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Key Capabilities:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+            <li class="text-muted"><span style="color: #00c3ff; margin-right: 10px;">✓</span> Core Banking Modernization</li>
+            <li class="text-muted"><span style="color: #00c3ff; margin-right: 10px;">✓</span> Real-time Fraud Detection AI</li>
+            <li class="text-muted"><span style="color: #00c3ff; margin-right: 10px;">✓</span> Crypto & Web3 Exchanges</li>
+            <li class="text-muted"><span style="color: #00c3ff; margin-right: 10px;">✓</span> PCI-DSS Compliant Gateways</li>
+          </ul>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="glass-card reveal stagger-2" style="border-top: 4px solid var(--color-neon-green);">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⚕️</div>
+          <h2 class="text-neon" style="margin-bottom: 1.5rem;">Healthcare & MedTech</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">HIPAA-compliant platforms that improve patient outcomes. From telemedicine web apps to AI models predicting patient readmission rates.</p>
+          <div style="background: rgba(0, 255, 102, 0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+            <p style="font-size: 0.9rem; font-style: italic; color: var(--color-neon-green);">"The telemedicine platform they built scaled from 0 to 50,000 monthly active users flawlessly." - VP Eng, HealthCore</p>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Key Capabilities:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+            <li class="text-muted"><span style="color: var(--color-neon-green); margin-right: 10px;">✓</span> WebRTC Telehealth Platforms</li>
+            <li class="text-muted"><span style="color: var(--color-neon-green); margin-right: 10px;">✓</span> Electronic Health Records (EHR)</li>
+            <li class="text-muted"><span style="color: var(--color-neon-green); margin-right: 10px;">✓</span> Medical Image Analysis (AI)</li>
+            <li class="text-muted"><span style="color: var(--color-neon-green); margin-right: 10px;">✓</span> Wearable IoT Integration</li>
+          </ul>
+        </div>
+
+        <!-- Logistics -->
+        <div class="glass-card reveal stagger-3" style="border-top: 4px solid #ffbd2e;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🚚</div>
+          <h2 class="text-neon" style="margin-bottom: 1.5rem; color: #ffbd2e;">Logistics & Supply Chain</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">Real-time tracking dashboards, predictive routing algorithms, and automated warehouse management systems that cut operational costs.</p>
+          <h4 style="margin-bottom: 1rem;">Key Capabilities:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+            <li class="text-muted"><span style="color: #ffbd2e; margin-right: 10px;">✓</span> IoT Fleet Management Systems</li>
+            <li class="text-muted"><span style="color: #ffbd2e; margin-right: 10px;">✓</span> Predictive Demand AI</li>
+            <li class="text-muted"><span style="color: #ffbd2e; margin-right: 10px;">✓</span> Supply Chain Visibility APIs</li>
+            <li class="text-muted"><span style="color: #ffbd2e; margin-right: 10px;">✓</span> Route Optimization Algorithms</li>
+          </ul>
+        </div>
+
+        <!-- E-Commerce -->
+        <div class="glass-card reveal stagger-4" style="border-top: 4px solid #ff5f56;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🛍️</div>
+          <h2 class="text-neon" style="margin-bottom: 1.5rem; color: #ff5f56;">E-Commerce & Retail</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">Headless commerce architectures and AI recommendation engines designed to handle Black Friday scale and increase average order value.</p>
+          <h4 style="margin-bottom: 1rem;">Key Capabilities:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+            <li class="text-muted"><span style="color: #ff5f56; margin-right: 10px;">✓</span> Headless Storefronts (Next.js)</li>
+            <li class="text-muted"><span style="color: #ff5f56; margin-right: 10px;">✓</span> Dynamic Pricing Algorithms</li>
+            <li class="text-muted"><span style="color: #ff5f56; margin-right: 10px;">✓</span> High-Volume Inventory APIs</li>
+            <li class="text-muted"><span style="color: #ff5f56; margin-right: 10px;">✓</span> AI Product Recommendations</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <qometrics-footer></qometrics-footer>
+</body>
+</html>

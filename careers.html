@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | QometricsTech</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/particles.js" defer></script>
+  <style>
+    .job-card { display: flex; justify-content: space-between; align-items: center; border-left: 4px solid var(--color-neon-green); }
+    @media (max-width: 600px) { .job-card { flex-direction: column; align-items: flex-start; gap: 1rem; } }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  <qometrics-header></qometrics-header>
+
+  <section style="padding-top: 150px;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Join The <span class="gradient-text">Future</span></h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Build the infrastructure of tomorrow. We are always looking for exceptional talent.</p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 6rem;">
+        <div class="reveal stagger-1">
+          <h2 class="text-neon" style="margin-bottom: 1.5rem;">Why Join QometricsTech?</h2>
+          <ul style="color: var(--color-text-main); display: flex; flex-direction: column; gap: 1rem; font-size: 1.1rem;">
+            <li>🌍 <strong>Remote First</strong> - Work from anywhere in the world.</li>
+            <li>🚀 <strong>Global Projects</strong> - Solve problems for Fortune 500s.</li>
+            <li>💰 <strong>Competitive Salary</strong> - Top-tier compensation packages.</li>
+            <li>📚 <strong>Learning Budget</strong> - $5,000/yr for personal growth.</li>
+            <li>⏱️ <strong>Flexible Work</strong> - Async communication, no micromanagement.</li>
+          </ul>
+        </div>
+        <div class="reveal stagger-2 glass-card" style="display: flex; align-items: center; justify-content: center; min-height: 200px;">
+          <h3 style="font-size: 2rem; color: var(--color-text-muted); text-align: center;">"The best place to do<br>the best work of your life."</h3>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h2 class="text-neon" style="margin-bottom: 2rem;">Open Positions</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="glass-card job-card reveal stagger-1">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Software Engineer (Backend)</h3>
+              <p class="text-muted">Remote · Full Time · Node.js / Python</p>
+            </div>
+            <a href="lets-talk.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Apply Now</a>
+          </div>
+
+          <div class="glass-card job-card reveal stagger-2">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Frontend Developer</h3>
+              <p class="text-muted">Remote · Full Time · React / Next.js</p>
+            </div>
+            <a href="lets-talk.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Apply Now</a>
+          </div>
+
+          <div class="glass-card job-card reveal stagger-3">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Cloud Engineer</h3>
+              <p class="text-muted">Remote · Full Time · AWS / Kubernetes</p>
+            </div>
+            <a href="lets-talk.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Apply Now</a>
+          </div>
+
+          <div class="glass-card job-card reveal stagger-4">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">AI Engineer</h3>
+              <p class="text-muted">Remote · Full Time · NLP / PyTorch</p>
+            </div>
+            <a href="lets-talk.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <qometrics-footer></qometrics-footer>
+</body>
+</html>

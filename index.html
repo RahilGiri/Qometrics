@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QometricsTech | Engineering Tomorrow's Digital Infrastructure</title>
+  
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- Scripts: GSAP & tsParticles (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-basic@2/tsparticles.basic.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-particles-links@2/tsparticles.interaction.particles.links.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+  
+  <!-- Main Scripts -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/particles.js" defer></script>
+</head>
+<body>
+
+  <!-- Particle Background Container -->
+  <div id="tsparticles"></div>
+
+  <!-- Shared Web Component: Header -->
+  <qometrics-header></qometrics-header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 80px;">
+    <div class="container grid-2" style="align-items: center; gap: 4rem;">
+      <div class="hero-content reveal stagger-1" style="z-index: 10;">
+        <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-family: var(--font-display);">
+          Engineering Tomorrow's<br>
+          <span class="gradient-text">Digital Infrastructure</span>
+        </h1>
+        <p class="text-muted" style="font-size: 1.25rem; margin-bottom: 2rem; max-width: 500px; line-height: 1.6;">
+          QometricsTech helps startups, enterprises, and governments build scalable software products, intelligent automation systems, and future-ready digital ecosystems.
+        </p>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <a href="services.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Explore Services</a>
+          <a href="portfolio.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; background: transparent; border: 1px solid var(--color-neon-green);">View Case Studies</a>
+        </div>
+        
+        <div class="hero-stats" style="display: flex; gap: 3rem; margin-top: 4rem;">
+          <div>
+            <h3 class="text-neon" style="font-size: 2rem; font-family: var(--font-code);">99.999%</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Guaranteed Uptime</p>
+          </div>
+          <div>
+            <h3 class="text-neon" style="font-size: 2rem; font-family: var(--font-code);">$5B+</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Client Revenue Generated</p>
+          </div>
+          <div>
+            <h3 class="text-neon" style="font-size: 2rem; font-family: var(--font-code);">150+</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Enterprise Deployments</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-graphic reveal stagger-2" style="position: relative; z-index: 10; display: flex; justify-content: center; animation: float 6s ease-in-out infinite;">
+        <img src="assets/images/ai_core_1781415736969.png" alt="Futuristic AI Core" style="width: 100%; max-width: 600px; border-radius: 20px; box-shadow: 0 0 50px rgba(0,255,102,0.2); border: 1px solid var(--color-border-glass);">
+      </div>
+    </div>
+  </section>
+  <!-- Trusted By Section -->
+  <section style="padding: 4rem 0; border-top: 1px solid var(--color-border-glass); border-bottom: 1px solid var(--color-border-glass); background: rgba(0, 255, 102, 0.02);">
+    <div class="container text-center reveal">
+      <p class="text-muted" style="margin-bottom: 2rem; font-family: var(--font-code); text-transform: uppercase; letter-spacing: 2px;">Trusted by innovative teams worldwide</p>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; opacity: 0.6; filter: grayscale(100%);">
+        <h3 style="font-size: 1.8rem;">AcmeCorp</h3>
+        <h3 style="font-size: 1.8rem;">GlobalNet</h3>
+        <h3 style="font-size: 1.8rem;">StarkIndustries</h3>
+        <h3 style="font-size: 1.8rem;">WayneEnterprises</h3>
+        <h3 style="font-size: 1.8rem;">InGenTech</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section style="padding-top: 100px;">
+    <!-- Expanded Services Preview -->
+  <section style="padding: 6rem 0; background: var(--color-bg-deep);">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+        <h2 style="font-size: 3rem; margin-bottom: 1rem;">Core <span class="gradient-text">Expertise</span></h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We specialize in deep-tech domains where generic solutions fail. Our engineers architect bespoke systems tailored to your exact industry requirements.</p>
+      </div>
+      <div class="grid-3" style="margin-bottom: 4rem;">
+        <div class="glass-card reveal stagger-1">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
+          <h3 class="text-neon" style="margin-bottom: 1rem;">Cloud-Native Engineering</h3>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">We build scalable microservices using Kubernetes, Docker, and serverless architectures on AWS, GCP, and Azure. Our systems are designed for high availability and auto-scaling to handle sudden spikes in traffic.</p>
+          <a href="services.html" class="hover-neon" style="color: var(--color-neon-green); font-weight: bold;">Learn More →</a>
+        </div>
+        <div class="glass-card reveal stagger-2">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+          <h3 class="text-neon" style="margin-bottom: 1rem;">Applied Artificial Intelligence</h3>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">From integrating open-source LLMs via LangChain to deploying custom predictive analytics models with PyTorch. We turn your raw data into actionable, automated intelligence.</p>
+          <a href="services.html" class="hover-neon" style="color: var(--color-neon-green); font-weight: bold;">Learn More →</a>
+        </div>
+        <div class="glass-card reveal stagger-3">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔐</div>
+          <h3 class="text-neon" style="margin-bottom: 1rem;">Zero-Trust Cybersecurity</h3>
+          <p class="text-muted" style="margin-bottom: 1.5rem;">Enterprise-grade security is baked into our code from day one. We implement zero-trust architectures, end-to-end encryption, and rigorous penetration testing for FinTech and HealthTech.</p>
+          <a href="services.html" class="hover-neon" style="color: var(--color-neon-green); font-weight: bold;">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" style="padding: var(--space-xl) 0; text-align: center; border-top: 1px solid var(--color-border-glass);">
+    <div class="container reveal">
+      <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-md);">Ready to Architect the <span class="gradient-text">Future?</span></h2>
+      <p class="text-muted" style="max-width: 600px; margin: 0 auto var(--space-lg) auto;">Stop patching legacy systems. Let's build a foundation that scales to millions of users seamlessly.</p>
+      <a href="lets-talk.html" class="btn-primary" style="padding: 1.5rem 3rem; font-size: 1.2rem;">Start Your Project</a>
+    </div>
+  </section>
+
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+        <h2 style="font-size: 3rem; margin-bottom: 1rem;">The QometricsTech <span class="gradient-text">Advantage</span></h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">Why $100M+ enterprises trust us to build their core architecture.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass-card reveal stagger-1">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-neon-green);">⚡</div>
+          <h3 style="margin-bottom: 1rem;">Elite Engineering Velocity</h3>
+          <p class="text-muted">We deploy production-ready code 40% faster than industry averages using our proprietary CI/CD scaffolding and pre-built enterprise components.</p>
+        </div>
+        <div class="glass-card reveal stagger-2">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-neon-green);">🛡️</div>
+          <h3 style="margin-bottom: 1rem;">Military-Grade Security</h3>
+          <p class="text-muted">Every product we ship undergoes rigorous automated penetration testing, ensuring SOC2, HIPAA, and ISO 27001 compliance from day one.</p>
+        </div>
+        <div class="glass-card reveal stagger-3">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-neon-green);">📈</div>
+          <h3 style="margin-bottom: 1rem;">Infinite Scalability</h3>
+          <p class="text-muted">Built on Kubernetes and serverless architectures, our applications are designed to handle millions of concurrent users without breaking a sweat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 4rem;">
+        <h2 style="font-size: 3rem;">Client <span class="gradient-text">Testimonials</span></h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-card reveal stagger-1" style="border-left: 4px solid var(--color-neon-green);">
+          <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"QometricsTech completely overhauled our legacy logistics system. They didn't just write code; they architected a solution that reduced our operating costs by $2M annually."</p>
+          <div>
+            <h4 style="color: var(--color-text-main);">Sarah Jenkins</h4>
+            <p class="text-muted" style="font-size: 0.9rem;">CTO, GlobalNet Logistics</p>
+          </div>
+        </div>
+
+        <div class="glass-card reveal stagger-2" style="border-left: 4px solid var(--color-neon-green);">
+          <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"Their AI engineering team is world-class. Within 3 months, we had a custom NLP model deployed in production that outperformed every off-the-shelf solution we tried."</p>
+          <div>
+            <h4 style="color: var(--color-text-main);">Marcus Thorne</h4>
+            <p class="text-muted" style="font-size: 0.9rem;">VP of Engineering, AcmeCorp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes scrollText {
+      0%, 14% { transform: translateY(0); }
+      16%, 30% { transform: translateY(-40px); }
+      33%, 47% { transform: translateY(-80px); }
+      50%, 64% { transform: translateY(-120px); }
+      66%, 80% { transform: translateY(-160px); }
+      83%, 97% { transform: translateY(-200px); }
+      100% { transform: translateY(-240px); }
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
+
+  <!-- Shared Web Component: Footer -->
+  <qometrics-footer></qometrics-footer>
+
+</body>
+</html>

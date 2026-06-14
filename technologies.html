@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technologies | QometricsTech</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/particles.js" defer></script>
+  <style>
+    .tech-category { margin-bottom: 4rem; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .tech-tag { padding: 0.5rem 1.5rem; background: var(--color-bg-glass); border: 1px solid var(--color-border-neon); border-radius: var(--radius-pill); font-family: var(--font-code); color: var(--color-neon-green); box-shadow: var(--shadow-neon); transition: var(--transition-fast); }
+    .tech-tag:hover { transform: scale(1.1); background: var(--color-neon-green-dim); }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  <qometrics-header></qometrics-header>
+
+  <section style="padding-top: 150px; text-align: center;">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 4rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Core <span class="gradient-text">Technologies</span></h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">We leverage a modern, enterprise-grade technology stack to build scalable, secure, and lightning-fast digital products.</p>
+      </div>
+
+      <!-- Orbital Tech Animation -->
+      <div class="orbit-container reveal stagger-1" style="margin-bottom: 6rem;">
+        <div class="tech-icon" style="transform: translate3d(150px, 0, 150px);">⚛️</div>
+        <div class="tech-icon" style="transform: translate3d(-150px, 0, -150px);">🐍</div>
+        <div class="tech-icon" style="transform: translate3d(0, 150px, -150px);">☁️</div>
+        <div class="tech-icon" style="transform: translate3d(0, -150px, 150px);">⚙️</div>
+        <div class="tech-icon" style="transform: translate3d(100px, 100px, 0);">🗄️</div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; text-shadow: var(--shadow-neon);">🌐</div>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-bottom: 6rem;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Our Tech <span class="gradient-text">Stack</span></h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We leverage the most modern, scalable, and battle-tested technologies to build enterprise software that lasts.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 6rem;">
+        
+        <!-- Frontend -->
+        <div class="grid-2 reveal stagger-1" style="gap: 4rem; align-items: center;">
+          <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Frontend & <span class="text-neon">Web Apps</span></h2>
+            <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 2rem;">We build blazing-fast, highly interactive user interfaces that run flawlessly across all devices. We focus on Core Web Vitals, accessibility, and component-driven architecture.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">React.js</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">Next.js</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">Vue.js</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">TypeScript</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">Tailwind CSS</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid var(--color-neon-green); pointer-events: none;">WebGL / Three.js</span>
+            </div>
+          </div>
+          <div class="glass-card" style="border-left: 4px solid var(--color-neon-green);">
+            <h3 style="margin-bottom: 1rem;">Why This Matters:</h3>
+            <p class="text-muted">By utilizing Server-Side Rendering (SSR) and Edge Computing via Next.js, our clients see an average of 65% faster page loads and a 40% increase in SEO organic traffic.</p>
+          </div>
+        </div>
+
+        <!-- Backend & Cloud -->
+        <div class="grid-2 reveal stagger-2" style="gap: 4rem; align-items: center;">
+          <div class="glass-card" style="border-left: 4px solid #00c3ff;">
+            <h3 style="margin-bottom: 1rem;">Infrastructure as Code:</h3>
+            <p class="text-muted">We script all cloud infrastructure using Terraform, allowing us to spin up exact replicas of your production environment for staging and testing in seconds.</p>
+          </div>
+          <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Backend & <span style="color: #00c3ff;">Cloud</span></h2>
+            <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 2rem;">Microservices and serverless architectures designed for millions of concurrent users. We build APIs that never sleep.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">Node.js</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">Python / Django</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">Go (Golang)</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">AWS Lambda</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">PostgreSQL</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #00c3ff; color: #00c3ff; pointer-events: none;">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & ML -->
+        <div class="grid-2 reveal stagger-3" style="gap: 4rem; align-items: center;">
+          <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">AI & <span style="color: #ffbd2e;">Machine Learning</span></h2>
+            <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 2rem;">Custom models, RAG pipelines, and predictive analytics that give your enterprise an unfair advantage.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <span class="btn-primary" style="background: transparent; border: 1px solid #ffbd2e; color: #ffbd2e; pointer-events: none;">TensorFlow</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #ffbd2e; color: #ffbd2e; pointer-events: none;">PyTorch</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #ffbd2e; color: #ffbd2e; pointer-events: none;">LangChain</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #ffbd2e; color: #ffbd2e; pointer-events: none;">OpenAI / LLMs</span>
+              <span class="btn-primary" style="background: transparent; border: 1px solid #ffbd2e; color: #ffbd2e; pointer-events: none;">Vector Databases (Pinecone)</span>
+            </div>
+          </div>
+          <div class="glass-card" style="border-left: 4px solid #ffbd2e;">
+            <h3 style="margin-bottom: 1rem;">The AI Edge:</h3>
+            <p class="text-muted">We don't just use wrappers. Our ML team fine-tunes open-source models (Llama 3, Mistral) on your proprietary data securely within your own VPC.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <qometrics-footer></qometrics-footer>
+</body>
+</html>
