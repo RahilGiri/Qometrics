@@ -15,6 +15,7 @@ class QometricsHeader extends HTMLElement {
             <a href="technologies.html" class="nav-link ${currentPath.includes('technologies.html') ? 'active' : ''}">Technologies</a>
             <a href="portfolio.html" class="nav-link ${currentPath.includes('portfolio.html') ? 'active' : ''}">Portfolio</a>
             <a href="resources.html" class="nav-link ${currentPath.includes('resources.html') ? 'active' : ''}">Resources</a>
+            <a href="careers.html" class="nav-link ${currentPath.includes('careers.html') ? 'active' : ''}">Careers</a>
             <a href="lets-talk.html" class="btn-primary mobile-only" style="margin-top: 2rem;">Let's Talk</a>
           </nav>
           <a href="lets-talk.html" class="btn-primary desktop-only">Let's Talk</a>

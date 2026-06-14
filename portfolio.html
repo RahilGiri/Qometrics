@@ -54,7 +54,7 @@
       tech: "React, Node.js, Kubernetes",
       feature: "Real-time IoT fleet tracking & AI routing.",
       outcome: "Reduced operational costs by $2.4M annually and improved delivery times by 18%.",
-      icon: "🌐"
+      image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c83a7f?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 2,
@@ -63,7 +63,7 @@
       tech: "React Native, Go, AWS",
       feature: "Secure crypto trading & fiat wallet.",
       outcome: "Scaled to 2M+ active users with zero downtime during peak market volatility.",
-      icon: "📱"
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 3,
@@ -72,7 +72,7 @@
       tech: "Python, TensorFlow, Azure",
       feature: "Machine learning for factory equipment.",
       outcome: "Decreased factory downtime by 40% and saved $5M in repair costs.",
-      icon: "🤖"
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 4,
@@ -81,7 +81,7 @@
       tech: "Next.js, WebRTC, PostgreSQL",
       feature: "HIPAA-compliant video consults.",
       outcome: "Enabled 100k+ remote patient consultations in the first 6 months.",
-      icon: "🏥"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 5,
@@ -90,7 +90,7 @@
       tech: "Next.js, Shopify Plus, Redis",
       feature: "Sub-second page loads for eCommerce.",
       outcome: "Increased conversion rate by 24% and boosted mobile sales by 30%.",
-      icon: "🛍️"
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: 6,
@@ -99,7 +99,7 @@
       tech: "Vue.js, Python, ElasticSearch",
       feature: "Enterprise threat monitoring.",
       outcome: "Detected and mitigated 15,000+ cyber threats automatically.",
-      icon: "🛡️"
+      image: "https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -113,7 +113,7 @@
         const card = document.createElement('div');
         card.className = `glass-card reveal active stagger-${(index % 4) + 1}`;
         card.innerHTML = `
-          <div class="portfolio-img">${p.icon}</div>
+          <img src="${p.image}" alt="${p.title}" style="width: 100%; height: 200px; border-radius: var(--radius-md); margin-bottom: 1rem; object-fit: cover; border: 1px solid var(--color-border-glass);">
           <h3 class="text-neon" style="margin-bottom: 0.5rem;">${p.title}</h3>
           <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tech:</strong> ${p.tech}</p>
           <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Feature:</strong> ${p.feature}</p>
