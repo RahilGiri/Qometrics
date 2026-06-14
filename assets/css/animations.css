@@ -71,7 +71,10 @@
   .hero-stats { flex-direction: column !important; gap: 1.5rem !important; align-items: center; text-align: center; margin-top: 2rem !important; }
   .nav-container { flex-direction: row; }
   
-  section { padding: 3rem 0 !important; }
+  .hero-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .hero-content > div[style*="display: flex"] { justify-content: center !important; }
+  
+  section { padding: 3rem 0; }
   .hero { min-height: auto !important; padding-top: 100px !important; padding-bottom: 3rem !important; }
   
   .container { padding: 0 1.5rem; }
