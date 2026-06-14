@@ -47,9 +47,7 @@ class QometricsFooter extends HTMLElement {
               <a href="index.html" class="logo" style="margin-bottom: 1rem;">Qometrics<span>Tech</span></a>
               <p class="text-muted" style="margin-bottom: 1.5rem;">Engineering Tomorrow’s Digital Infrastructure. We build scalable software products, intelligent automation systems, and future-ready digital ecosystems.</p>
               <div class="social-links" style="display:flex; gap: 1rem;">
-                <a href="#" class="text-muted hover-neon">LinkedIn</a>
-                <a href="#" class="text-muted hover-neon">Twitter</a>
-                <a href="#" class="text-muted hover-neon">GitHub</a>
+                <a href="https://www.linkedin.com/company/qometrics-tech/" target="_blank" rel="noopener noreferrer" class="text-muted hover-neon">LinkedIn</a>
               </div>
             </div>
             <div>
@@ -103,8 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursorOutline = document.createElement('div');
   cursorOutline.className = 'cursor-outline';
   
-  document.body.appendChild(cursorDot);
-  document.body.appendChild(cursorOutline);
+  const isDesktop = window.matchMedia('(hover: hover)').matches && window.innerWidth > 768;
+  if (isDesktop) {
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorOutline);
+  }
 
   window.addEventListener('mousemove', (e) => {
     const posX = e.clientX;
