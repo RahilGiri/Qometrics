@@ -145,3 +145,52 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Trigger on load
 });
+
+  // Google Apps Script Form Submission
+  const gasForms = document.querySelectorAll('form[action^="https://script.google.com/macros/"]');
+  gasForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerText : 'Submit';
+      
+      if (submitBtn) {
+        submitBtn.innerText = 'Submitting...';
+        submitBtn.disabled = true;
+      }
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          if (submitBtn) {
+            submitBtn.innerText = 'Success!';
+            submitBtn.style.backgroundColor = 'var(--color-neon-green)';
+            submitBtn.style.color = 'var(--color-bg-deep)';
+          }
+          form.reset();
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.innerText = originalBtnText;
+              submitBtn.disabled = false;
+              submitBtn.style.backgroundColor = '';
+              submitBtn.style.color = '';
+            }
+          }, 3000);
+        } else {
+          throw new Error(data.message || 'Error submitting form');
+        }
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        if (submitBtn) {
+          submitBtn.innerText = 'Failed. Try again.';
+          submitBtn.disabled = false;
+        }
+      });
+    });
+  });
