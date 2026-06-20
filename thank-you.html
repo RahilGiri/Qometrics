@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | QometricsTech</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/particles.js" defer></script>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  <qometrics-header></qometrics-header>
+
+  <section style="padding-top: 150px; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container reveal text-center">
+      <div class="glass-card" style="max-width: 600px; margin: 0 auto; padding: 4rem 2rem; border-left: 4px solid var(--color-neon-green);">
+        <h1 class="text-neon" style="font-size: 3rem; margin-bottom: 1.5rem;">Thank You!</h1>
+        <p id="thankYouMessage" class="text-muted" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem;">
+          We have successfully received your submission. We will review your details and get back to you within 7 days.
+        </p>
+        <a href="/" class="btn-primary" style="padding: 1rem 2rem;">Return to Homepage</a>
+      </div>
+    </div>
+  </section>
+
+  <qometrics-footer></qometrics-footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get('role');
+      const messageEl = document.getElementById('thankYouMessage');
+      
+      if (role) {
+        messageEl.innerHTML = `Thank you for applying for the <strong class="text-neon">${role}</strong> role. We have successfully received your application. We will review your profile and get back to you within 7 days.`;
+      }
+    });
+  </script>
+</body>
+</html>

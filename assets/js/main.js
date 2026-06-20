@@ -173,14 +173,16 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.color = 'var(--color-bg-deep)';
         }
         form.reset();
-        setTimeout(() => {
-          if (submitBtn) {
-            submitBtn.innerText = originalBtnText;
-            submitBtn.disabled = false;
-            submitBtn.style.backgroundColor = '';
-            submitBtn.style.color = '';
-          }
-        }, 3000);
+          const formData = new FormData(form);
+          const role = formData.get('role_applied_for') || '';
+          
+          setTimeout(() => {
+            if (role) {
+              window.location.href = `/thank-you?role=${encodeURIComponent(role)}`;
+            } else {
+              window.location.href = '/thank-you';
+            }
+          }, 800);
       })
       .catch(error => {
         console.error('Error!', error.message);
