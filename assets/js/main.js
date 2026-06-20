@@ -162,28 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
       
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form)
+        body: new FormData(form),
+        mode: 'no-cors'
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === 'success') {
-          if (submitBtn) {
-            submitBtn.innerText = 'Success!';
-            submitBtn.style.backgroundColor = 'var(--color-neon-green)';
-            submitBtn.style.color = 'var(--color-bg-deep)';
-          }
-          form.reset();
-          setTimeout(() => {
-            if (submitBtn) {
-              submitBtn.innerText = originalBtnText;
-              submitBtn.disabled = false;
-              submitBtn.style.backgroundColor = '';
-              submitBtn.style.color = '';
-            }
-          }, 3000);
-        } else {
-          throw new Error(data.message || 'Error submitting form');
+      .then(() => {
+        // no-cors returns an opaque response, we assume success
+        if (submitBtn) {
+          submitBtn.innerText = 'Success!';
+          submitBtn.style.backgroundColor = 'var(--color-neon-green)';
+          submitBtn.style.color = 'var(--color-bg-deep)';
         }
+        form.reset();
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.innerText = originalBtnText;
+            submitBtn.disabled = false;
+            submitBtn.style.backgroundColor = '';
+            submitBtn.style.color = '';
+          }
+        }, 3000);
       })
       .catch(error => {
         console.error('Error!', error.message);
