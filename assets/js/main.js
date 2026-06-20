@@ -57,6 +57,7 @@ class QometricsFooter extends HTMLElement {
                 <a href="/careers" class="footer-link">Careers</a>
                 <a href="/case-studies" class="footer-link">Case Studies</a>
                 <a href="/contact" class="footer-link">Contact</a>
+                <a href="/terms-and-conditions" class="footer-link">Terms & Conditions</a>
               </div>
             </div>
             <div>
