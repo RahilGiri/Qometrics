@@ -4,21 +4,21 @@ class QometricsHeader extends HTMLElement {
     this.innerHTML = `
       <header>
         <div class="container nav-container">
-          <a href="index.html" class="logo">Qometrics<span>Tech</span></a>
+          <a href="/" class="logo">Qometrics<span>Tech</span></a>
           <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
           <nav class="nav-links" id="main-nav">
-            <a href="index.html" class="nav-link ${currentPath.includes('index.html') || currentPath === '/' ? 'active' : ''}">Home</a>
-            <a href="about.html" class="nav-link ${currentPath.includes('about.html') ? 'active' : ''}">About</a>
-            <a href="services.html" class="nav-link ${currentPath.includes('services.html') ? 'active' : ''}">Services</a>
-            <a href="solutions.html" class="nav-link ${currentPath.includes('solutions.html') ? 'active' : ''}">Solutions</a>
-            <a href="industries.html" class="nav-link ${currentPath.includes('industries.html') ? 'active' : ''}">Industries</a>
-            <a href="technologies.html" class="nav-link ${currentPath.includes('technologies.html') ? 'active' : ''}">Technologies</a>
-            <a href="portfolio.html" class="nav-link ${currentPath.includes('portfolio.html') ? 'active' : ''}">Portfolio</a>
-            <a href="resources.html" class="nav-link ${currentPath.includes('resources.html') ? 'active' : ''}">Resources</a>
-            <a href="careers.html" class="nav-link ${currentPath.includes('careers.html') ? 'active' : ''}">Careers</a>
-            <a href="lets-talk.html" class="btn-primary mobile-only" style="margin-top: 2rem;">Let's Talk</a>
+            <a href="/" class="nav-link ${currentPath === '/' ? 'active' : ''}">Home</a>
+            <a href="/about" class="nav-link ${currentPath.includes('/about') ? 'active' : ''}">About</a>
+            <a href="/services" class="nav-link ${currentPath.includes('/services') ? 'active' : ''}">Services</a>
+            <a href="/solutions" class="nav-link ${currentPath.includes('/solutions') ? 'active' : ''}">Solutions</a>
+            <a href="/industries" class="nav-link ${currentPath.includes('/industries') ? 'active' : ''}">Industries</a>
+            <a href="/technologies" class="nav-link ${currentPath.includes('/technologies') ? 'active' : ''}">Technologies</a>
+            <a href="/portfolio" class="nav-link ${currentPath.includes('/portfolio') ? 'active' : ''}">Portfolio</a>
+            <a href="/resources" class="nav-link ${currentPath.includes('/resources') ? 'active' : ''}">Resources</a>
+            <a href="/careers" class="nav-link ${currentPath.includes('/careers') ? 'active' : ''}">Careers</a>
+            <a href="/lets-talk" class="btn-primary mobile-only" style="margin-top: 2rem;">Let's Talk</a>
           </nav>
-          <a href="lets-talk.html" class="btn-primary desktop-only">Let's Talk</a>
+          <a href="/lets-talk" class="btn-primary desktop-only">Let's Talk</a>
         </div>
       </header>
     `;
@@ -44,7 +44,7 @@ class QometricsFooter extends HTMLElement {
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a href="index.html" class="logo" style="margin-bottom: 1rem;">Qometrics<span>Tech</span></a>
+              <a href="/" class="logo" style="margin-bottom: 1rem;">Qometrics<span>Tech</span></a>
               <p class="text-muted" style="margin-bottom: 1.5rem;">Engineering Tomorrow’s Digital Infrastructure. We build scalable software products, intelligent automation systems, and future-ready digital ecosystems.</p>
               <div class="social-links" style="display:flex; gap: 1rem;">
                 <a href="https://www.linkedin.com/company/qometrics-tech/" target="_blank" rel="noopener noreferrer" class="text-muted hover-neon">LinkedIn</a>
@@ -53,19 +53,19 @@ class QometricsFooter extends HTMLElement {
             <div>
               <h4 class="footer-heading">Company</h4>
               <div class="footer-links">
-                <a href="about.html" class="footer-link">About Us</a>
-                <a href="careers.html" class="footer-link">Careers</a>
-                <a href="case-studies.html" class="footer-link">Case Studies</a>
-                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="/about" class="footer-link">About Us</a>
+                <a href="/careers" class="footer-link">Careers</a>
+                <a href="/case-studies" class="footer-link">Case Studies</a>
+                <a href="/contact" class="footer-link">Contact</a>
               </div>
             </div>
             <div>
               <h4 class="footer-heading">Services</h4>
               <div class="footer-links">
-                <a href="services.html#software" class="footer-link">Software Dev</a>
-                <a href="services.html#ai" class="footer-link">AI & ML</a>
-                <a href="services.html#cloud" class="footer-link">Cloud Engineering</a>
-                <a href="services.html#cybersecurity" class="footer-link">Cybersecurity</a>
+                <a href="/services#software" class="footer-link">Software Dev</a>
+                <a href="/services#ai" class="footer-link">AI & ML</a>
+                <a href="/services#cloud" class="footer-link">Cloud Engineering</a>
+                <a href="/services#cybersecurity" class="footer-link">Cybersecurity</a>
               </div>
             </div>
             <div>
@@ -73,7 +73,7 @@ class QometricsFooter extends HTMLElement {
               <div class="footer-links">
                 <span class="text-muted">California HQ</span>
                 <span class="text-muted">Global Operations</span>
-                <a href="lets-talk.html" class="text-neon" style="margin-top: 1rem; display: inline-block;">Book a Call &rarr;</a>
+                <a href="/lets-talk" class="text-neon" style="margin-top: 1rem; display: inline-block;">Book a Call &rarr;</a>
               </div>
             </div>
           </div>
