@@ -57,7 +57,6 @@ class QometricsFooter extends HTMLElement {
                 <a href="/careers" class="footer-link">Careers</a>
                 <a href="/case-studies" class="footer-link">Case Studies</a>
                 <a href="/contact" class="footer-link">Contact</a>
-                <a href="/terms-and-conditions" class="footer-link">Terms & Conditions</a>
               </div>
             </div>
             <div>
@@ -82,7 +81,7 @@ class QometricsFooter extends HTMLElement {
             <span>&copy; 2026 QometricsTech. All rights reserved.</span>
             <div style="display:flex; gap:1rem;">
               <a href="#" class="footer-link">Privacy Policy</a>
-              <a href="#" class="footer-link">Terms of Service</a>
+              <a href="/terms-and-conditions" class="footer-link">Terms & Conditions</a>
             </div>
           </div>
         </div>
