@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Trigger on load
-});
 
   // Google Apps Script Form Submission
   const gasForms = document.querySelectorAll('form[action^="https://script.google.com/macros/"]');
@@ -173,16 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.style.color = 'var(--color-bg-deep)';
         }
         form.reset();
-          const formData = new FormData(form);
-          const role = formData.get('role_applied_for') || '';
-          
-          setTimeout(() => {
-            if (role) {
-              window.location.href = `/thank-you?role=${encodeURIComponent(role)}`;
-            } else {
-              window.location.href = '/thank-you';
-            }
-          }, 800);
+        const formData = new FormData(form);
+        const role = formData.get('role_applied_for') || '';
+        
+        setTimeout(() => {
+          if (role) {
+            window.location.href = `/thank-you?role=${encodeURIComponent(role)}`;
+          } else {
+            window.location.href = '/thank-you';
+          }
+        }, 800);
       })
       .catch(error => {
         console.error('Error!', error.message);
@@ -193,3 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+});
+
