@@ -144,4 +144,35 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Trigger on load
+
+  // Google Apps Script Form Submission (AJAX Redirect)
+  const gasForms = document.querySelectorAll('form[action^="https://script.google.com/macros/"]');
+  gasForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.innerText = 'Submitting...';
+        submitBtn.disabled = true;
+      }
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        mode: 'no-cors'
+      })
+      .then(() => {
+        window.location.href = '/thankyouforapplying';
+      })
+      .catch(error => {
+        console.error('Submission failed', error);
+        if (submitBtn) {
+          submitBtn.innerText = 'Error. Try again';
+          submitBtn.disabled = false;
+        }
+      });
+    });
+  });
+
 });
