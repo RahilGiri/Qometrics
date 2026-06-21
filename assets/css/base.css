@@ -12,7 +12,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none; /* For custom cursor */
+   
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,7 +25,7 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition-fast);
-  cursor: none; /* Custom cursor handles clicks */
+   
 }
 
 ul {
@@ -60,50 +60,7 @@ section {
 }
 
 /* Custom Cursor */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-neon-green);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--color-neon-green);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9998;
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-out;
-}
-
-.cursor-hover .cursor-dot {
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
-  border: 2px solid var(--color-neon-green);
-}
-
-.cursor-hover .cursor-outline {
-  width: 60px;
-  height: 60px;
-  background-color: var(--color-neon-green-dim);
-}
-
-#tsparticles {
+.cursor-hover .cursor-hover #tsparticles {
   position: fixed;
   top: 0;
   left: 0;

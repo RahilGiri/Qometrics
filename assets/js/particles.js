@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
           value: "transparent",
         },
       },
-      fpsLimit: 60,
+      fpsLimit: 30, // Optimized for performance
       interactivity: {
         events: {
           onClick: {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             enable: true,
             area: 800,
           },
-          value: 80,
+          value: 40, // Reduced particle count
         },
         opacity: {
           value: 0.5,
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
           value: { min: 1, max: 3 },
         },
       },
-      detectRetina: true,
+      detectRetina: false, // Disabled retina scaling for performance
     });
   }
 });

@@ -47,7 +47,6 @@ header {
   border: none;
   color: var(--color-text-main);
   font-size: 1.5rem;
-  cursor: none;
   z-index: 1001;
 }
 

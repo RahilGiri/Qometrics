@@ -93,42 +93,7 @@ class QometricsFooter extends HTMLElement {
 customElements.define('qometrics-header', QometricsHeader);
 customElements.define('qometrics-footer', QometricsFooter);
 
-// Custom Cursor & Interactivity
-document.addEventListener('DOMContentLoaded', () => {
-  // Setup cursor
-  const cursorDot = document.createElement('div');
-  cursorDot.className = 'cursor-dot';
-  const cursorOutline = document.createElement('div');
-  cursorOutline.className = 'cursor-outline';
-  
-  const isDesktop = window.matchMedia('(hover: hover)').matches && window.innerWidth > 768;
-  if (isDesktop) {
-    document.body.appendChild(cursorDot);
-    document.body.appendChild(cursorOutline);
-  }
-
-  window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-    
-    // Slight delay for outline for trailing effect
-    setTimeout(() => {
-      cursorOutline.style.left = `${posX}px`;
-      cursorOutline.style.top = `${posY}px`;
-    }, 50);
-  });
-
-  // Add hover effect for clickable elements
-  const interactables = document.querySelectorAll('a, button, input, textarea, select, .glass-card');
-  interactables.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-
-  // Scroll Reveal Animation
+// Scroll Reveal Animation
   const revealElements = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
