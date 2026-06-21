@@ -60,12 +60,19 @@
                   <input type="email" name="email" class="form-input" required placeholder="john@company.com">
                 </div>
               </div>
-              
+
               <div class="grid-2" style="gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" name="phone" class="form-input" required placeholder="+1 234 567 8900">
+                </div>
                 <div class="form-group">
                   <label class="form-label">Company</label>
                   <input type="text" name="company" class="form-input" placeholder="Acme Corp">
                 </div>
+              </div>
+              
+              <div class="form-group">
                 <div class="form-group">
                   <label class="form-label">Project Type</label>
                   <select name="project_type" class="form-input">
@@ -131,12 +138,30 @@
             submitBtn.disabled = true;
           }
 
+          // Merge custom fields into the message so Apps Script receives it cleanly
+          const rawFormData = new FormData(form);
+          const customMessage = `
+Company: ${rawFormData.get('company') || 'N/A'}
+Project Type: ${rawFormData.get('project_type') || 'N/A'}
+
+Message:
+${rawFormData.get('message') || ''}
+          `.trim();
+
+          const sendData = new URLSearchParams();
+          sendData.append('name', rawFormData.get('name') || '');
+          sendData.append('email', rawFormData.get('email') || '');
+          sendData.append('phone', rawFormData.get('phone') || '');
+          sendData.append('resume', ''); // Not applicable for contact
+          sendData.append('role_applied_for', 'General Contact');
+          sendData.append('message', customMessage);
+
           try {
             await fetch(
               'https://script.google.com/macros/s/AKfycbwT9b3C0wn_MMbFM2UKWo_DAotQkGYYsGx2ZHPgl80RSaRK53U2FfITEsaIKafOAaSl/exec',
               {
                 method: 'POST',
-                body: new URLSearchParams(new FormData(form)),
+                body: sendData,
                 mode: 'no-cors'
               }
             );
