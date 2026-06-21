@@ -179,32 +179,26 @@
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const formData = new FormData(form);
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerText;
         submitBtn.innerText = 'Submitting...';
         submitBtn.disabled = true;
 
         try {
-          const response = await fetch(
+          await fetch(
             'https://script.google.com/macros/s/AKfycbxEKO9ySwGa8lig-ZUrKEk7_3CPIhur4kH_Xxo5QPZU1dE0ffaxHi0txZXCxNKvd-zK/exec',
             {
               method: 'POST',
-              body: formData
+              body: new URLSearchParams(new FormData(form)),
+              mode: 'no-cors'
             }
           );
-          const data = await response.json();
-          if (data.status === 'success') {
-            window.location.href = 'https://qometrics.dpdns.org/thankyouforapplying';
-          } else {
-            alert('Something went wrong. Please try again.');
-            submitBtn.innerText = originalText;
-            submitBtn.disabled = false;
-          }
+          window.location.href = '/thankyouforapplying';
         } catch (error) {
           console.error(error);
-          // Fallback redirect if CORS parsing fails but request succeeded opaquely
-          window.location.href = 'https://qometrics.dpdns.org/thankyouforapplying';
+          alert('Something went wrong. Please try again.');
+          submitBtn.innerText = originalText;
+          submitBtn.disabled = false;
         }
       });
     });
