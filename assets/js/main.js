@@ -94,6 +94,7 @@ customElements.define('qometrics-header', QometricsHeader);
 customElements.define('qometrics-footer', QometricsFooter);
 
 // Scroll Reveal Animation
+document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
